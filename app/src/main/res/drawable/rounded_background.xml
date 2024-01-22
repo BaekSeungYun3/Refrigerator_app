@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" /> <!-- 배경 색상 설정 -->
+    <corners android:radius="16dp" /> <!-- 둥근 사각형의 반지름 설정 -->
+</shape>

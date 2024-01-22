@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category">
+        <item>전체</item>
+        <item>구매</item>
+        <item>보관</item>
+        <item>소비</item>
+        <item>꿀팁</item>
+        <item>냉장고 소개</item>
+        <item>레시피 공유</item>
+    </string-array>
+</resources>

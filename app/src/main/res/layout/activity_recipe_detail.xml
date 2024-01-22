@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recipe_Activity">
+
+    <!--고정-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/cart_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A4C3FF"
+            android:elevation="0dp"
+            app:title="메뉴 추천"
+            app:titleTextColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F4F5F7"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/recommendation_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="필요한 재료를 장바구니에 추가 해보세요!"
+                android:textSize="23sp"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:id="@+id/ret"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="이미 냉장,냉동,실온에 보관되어있는 재료는 빨간색으로 표시됩니다."
+                android:layout_below="@id/recommendation_text"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewRecipeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:textSize="30sp"
+        android:text="메뉴이름"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+    <TextView
+        android:id="@+id/ningre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewRecipeName"
+        android:textSize="18sp"
+        android:text="필요한 재료:"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="11dp"/>
+
+    <!--bottom네비  -->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ningre">
+
+        <LinearLayout
+            android:id="@+id/containerCheckBoxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="18sp">
+
+            <!-- 체크박스와 관련된 코드 및 다른 뷰 요소들 추가 -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navi"
+        android:layout_width="411dp"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#A4C3FF"
+        app:itemIconSize="36dp"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/menu" />
+
+</RelativeLayout>

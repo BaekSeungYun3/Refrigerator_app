@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recipe_Activity">
+
+    <!--고정-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/cart_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#A4C3FF"
+            android:elevation="0dp"
+            app:title="메뉴 추천"
+            app:titleTextColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F4F5F7"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/recommendation_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="냉장고 · 실온에 보관되어있는 식재료를\n기반으로 메뉴를 추천해드려요."
+                android:textSize="21sp"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:id="@+id/ret"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="메뉴를 선택하면 필요한 재료를 확인 할 수 있어요."
+                android:layout_below="@id/recommendation_text"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonFindRecipes"
+                android:layout_width="75dp"
+                android:layout_height="78dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/butt"
+                android:scaleType="centerCrop"
+                android:text="메뉴 추천\n받기"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listViewResult"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!--bottom네비  -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navi"
+        android:layout_width="411dp"
+        android:layout_height="61dp"
+        android:background="#A4C3FF"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:itemIconSize="36dp"
+        app:menu="@menu/menu" />
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Community_Activity">
+    <!--고정-->
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/cart_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#A4C3FF"
+            app:title="커뮤니티"
+            app:titleTextColor="@color/white" />
+    </LinearLayout>
+    <!--여기까지-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_follow"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_add_post"
+        android:visibility="invisible"
+        app:borderWidth="0dp"
+        app:fabSize="normal" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab_main"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_person_add"
+        android:visibility="invisible"
+        app:borderWidth="0dp"
+        app:fabSize="normal" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignBottom="@+id/recyclerView"
+        android:src="@drawable/ic_add"
+        app:borderWidth="0dp"
+        android:backgroundTint="@color/blue"/>
+
+    <!--bottom네비  -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navi"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="2dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#A4C3FF"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:itemIconSize="36dp"
+        app:menu="@menu/menu"/>
+
+</RelativeLayout>

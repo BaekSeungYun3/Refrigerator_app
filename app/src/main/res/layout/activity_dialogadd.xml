@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayoutDialog"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/dlradius"
+    android:gravity="center"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Dialogadd_Activity">
+
+    <ImageButton
+        android:id="@+id/camraButton"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/dlcamera" />
+
+
+    <ImageButton
+        android:id="@+id/writeButton"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/dlwrite" />
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cart_Activity">
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="653dp"></FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="장바구니"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="140dp"
+        android:background="#FFA000"
+        android:textStyle="bold"
+        />
+
+
+    <!--bottom네비  -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A4C3FF"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:itemIconSize="36dp"
+        app:menu="@menu/menu"/>
+
+</RelativeLayout>
